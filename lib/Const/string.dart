@@ -47,5 +47,5 @@ supportPolicy="Support Policy",productLike="Product You May Also Like",
 logout ="Log Out";
 
 //profile strings
-const wishlist="My Wisthlist",orders="My Orders", messages ="Messages";
+const wishlist="My Wisthlist",orders="My Orders", messages ="Messages",img ="hello";
 
