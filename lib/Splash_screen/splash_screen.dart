@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: redColor,
+      backgroundColor: Colors.blue,
       body: Center(
         child: Column(
           children: [
@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
             5.heightBox,
             appversion.text.white.make(),
             const Spacer(),
-            credits.text.white.fontFamily(semibold).make(),
+            // credits.text.white.fontFamily(semibold).make(),
             30.heightBox,
             //Splash Screen ui is competeed ------
           ],

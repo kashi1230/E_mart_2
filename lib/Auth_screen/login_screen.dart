@@ -1,4 +1,3 @@
-
 import 'package:e_mart/Auth_screen/sighnup.dart';
 import 'package:e_mart/Const/consts.dart';
 import 'package:e_mart/Const/list.dart';
@@ -9,15 +8,15 @@ import 'package:e_mart/common%20_widget/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import '../common _widget/bg_widget.dart';
+
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return bgWidget(child:
-       Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.blue,
          extendBody: true,
         body: SafeArea(
           child: Center(
@@ -84,6 +83,6 @@ class LoginScreen extends StatelessWidget {
             )
           ),
         ),
-    ));
+    );
   }
 }

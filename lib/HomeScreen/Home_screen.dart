@@ -7,12 +7,11 @@ import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red.shade500,
+        backgroundColor: Colors.blue,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(30),
           child: Padding(

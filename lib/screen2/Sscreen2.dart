@@ -13,7 +13,7 @@ class Screen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.shade500,
+      backgroundColor: Colors.blue,
       body: SafeArea(
         child: Padding(
             padding: const EdgeInsets.only(top: 70,left: 0),
@@ -51,8 +51,7 @@ class Screen2 extends StatelessWidget {
                           }
                       ).box.width(180).height(50).make(),
                     ],
-                  ),
-                ),
+                  ),),
            ]
             ),
         ),
