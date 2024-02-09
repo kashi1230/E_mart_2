@@ -5,8 +5,10 @@ import 'package:e_mart/Splash_screen/splash_screen.dart';
 import 'package:e_mart/screen2/Sscreen2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+void main() async{
+  await GetStorage.init();
   runApp(const MyApp());
 }
 

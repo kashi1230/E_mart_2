@@ -42,11 +42,13 @@ dependencies:
   firebase_storage: ^11.4.1
   cloud_firestore: ^4.12.2
   auto_size_text: 3.0.0
-  flutter_animate: 4.1.1+1
-  google_fonts: 4.0.3
+  flutter_animate: 4.4.1
+  google_fonts: ^6.1.0
   page_transition: 2.1.0
-  font_awesome_flutter: 10.6.0
+  font_awesome_flutter: 10.7.0
   anim_search_bar: ^2.0.3
+  http: ^1.2.0
+  get_storage: ^2.1.1
 
 
 dev_dependencies:

@@ -14,7 +14,7 @@ const featureimages2 =[ imgS4,imgS5,imgS6];
 const featuredTitle1 = [ womendress,girlsdress,girlswatch];
 const featuredTitle2 = [ boysglass,mobilephones,tShirt];
 
-const catgoriesList=[womenClothing,menClothing,compAccess,autoMobile,kidToys,sports,jwelery,cellphone,furniture];
+const catgoriesList=[cat1,Cat2,Cat3,Cat4,Cat5,Cat6,Cat7,Cat8,Cat9];
 const catgorieImages =[imgFc1,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6,imgFc7,imgFc8,imgFc9];
 
 const itemdetailsButton=[video,reviews,privacyPolicy,returnPolicy,suportPolicy];

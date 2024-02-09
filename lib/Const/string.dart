@@ -32,10 +32,10 @@ featuredproduct ="Featured Product";
 
 //category string
 
-const womenClothing = "Women Clothing",menClothing="Men Cloting & Fashion",
-    compAccess =" Computer & Accessoires", autoMobile ="AutoMobile",
-    kidToys ="Kide & Toys", sports ="Sports",jwelery ="Jwelery",
-    cellphone = "Cellphone & Tab",furniture="Furniture";
+const cat1 = "Cat1",Cat2="Cat2",
+    Cat3 =" Cat3", Cat4 ="Cat4",
+    Cat5 ="Cat5", Cat6 ="Cat6",Cat7 ="Cat7",
+    Cat8 = "Cat8",Cat9="Cat9";
 
 //item details strings
 

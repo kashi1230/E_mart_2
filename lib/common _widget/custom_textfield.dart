@@ -1,13 +1,15 @@
 import 'package:e_mart/Const/consts.dart';
 import 'package:flutter/material.dart';
 
-Widget  customTextField({String? title ,String? hint , controller}){
+Widget  customTextField({String? title ,String? hint , controller,}){
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       title!.text.color(redColor).fontFamily(semibold).size(16).make(),
       5.heightBox,
       TextFormField(
+        controller: controller,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
         decoration: InputDecoration(
           hintStyle: const TextStyle(fontFamily: semibold,color: textfieldGrey),
           hintText: hint,
@@ -16,7 +18,7 @@ Widget  customTextField({String? title ,String? hint , controller}){
           filled: true,
           border: InputBorder.none,
           focusedBorder:const OutlineInputBorder(
-            borderSide: BorderSide(color:redColor),
+            borderSide: BorderSide(color: Colors.blueAccent),
           )
         ),
       ),

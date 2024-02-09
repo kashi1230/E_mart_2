@@ -1,54 +1,50 @@
 import 'package:e_mart/Const/consts.dart';
+import 'package:e_mart/api/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../common _widget/applogo.dart';
-import '../common _widget/bg_widget.dart';
 import '../common _widget/button.dart';
 import '../common _widget/custom_textfield.dart';
 
-class SighnupScreen extends StatefulWidget {
-  const SighnupScreen({super.key});
+class SighnupScreen extends StatelessWidget {
+   SighnupScreen({super.key});
 
-  @override
-  State<SighnupScreen> createState() => _SighnupScreenState();
-}
+ authApi signupapi = Get.put(authApi());
 
-class _SighnupScreenState extends State<SighnupScreen> {
-  bool? ischeck = false;
   @override
   Widget build(BuildContext context) {
-    return bgWidget(child:
+    return
     Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Center(
-          child: Center(
+      extendBody: true,
+      backgroundColor: redColor,
+      body: SingleChildScrollView(
+        child: Center(
             child: Column(
               children: [
-                (context.screenHeight *0.1).heightBox,
+                (context.screenHeight *0.07).heightBox,
                 applogowidget(),
                 10.heightBox,
                 "join the  $appname".text.fontFamily(bold).white.size(18).make(),
                 15.heightBox,
-
                 Column(
                   children: [
-                    customTextField(hint: namehint,title: name),
-                    customTextField(hint: hintemail,title: email),
-                    customTextField(hint: passhint,title: password),
-                    customTextField(hint: retypepasshint,title: retypepass),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(onPressed: (){}, child: forgetpass.text.make()),),
+                    customTextField(hint: "Name",title: "Name",controller: signupapi.nameController),
+                    customTextField(hint: "Phone No...",title: "Phone No.",controller: signupapi.phoneController),
+                    customTextField(hint: "Alternate No...",title: "Alternat No.",controller: signupapi.altphnController),
+                    customTextField(hint:"Address...",title: "Address",controller: signupapi.addressController),
+                    customTextField(hint: "City...",title: "City",controller: signupapi.cityController),
+                    customTextField(hint: "State...",title: "State",controller: signupapi.stateController),
+                    customTextField(hint: passhint,title: "Password",controller: signupapi.passwordcontroller),
+                    5.heightBox,
                     Row(
                       children: [
-                        Checkbox(
-                          activeColor: redColor,
-                          checkColor: whiteColor,
-                            value: ischeck, onChanged: (newvalue) {
-                            setState(() {
-                              ischeck = newvalue;
-                            });
-                        }),
+                       Obx(() =>  Checkbox(
+                           activeColor: redColor,
+                           checkColor: whiteColor,
+                           value: signupapi.ischeck.value,
+                           onChanged: (newvalue) {
+                             signupapi.ischeck.value = newvalue!;
+                           }),),
                         10.widthBox,
                         Expanded(
                           child: RichText(text: const TextSpan(
@@ -82,9 +78,14 @@ class _SighnupScreenState extends State<SighnupScreen> {
                       ],
                     ),
                     5.heightBox,
-                    ourButton(
-                        color:ischeck==true?redColor:lightGrey,title: signup,textColor: whiteColor,onPress: (){}
-                    ).box.width(context.screenWidth -50).make(),
+                    Obx(() => ourButton(
+                        color:signupapi.ischeck.value==true?redColor:lightGrey,
+                        title: signup,textColor: whiteColor,
+                        onPress: (){
+                          FocusScope.of(context).unfocus();
+                          signupapi.Signup();
+                        }
+                    ).box.width(context.screenWidth -50).make(),),
                     10.heightBox,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -98,10 +99,10 @@ class _SighnupScreenState extends State<SighnupScreen> {
                   ],
                 ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth -70).shadowSm.make(),
               ],
-            ),
-          )
+            )
+        ),
       ),
-    ));
+    );
   }
 }
 

@@ -27,29 +27,29 @@ class Screen2 extends StatelessWidget {
                      100.heightBox,
                      ourButton(
                        textColor: Colors.black,
-                       title: "B1",
+                       title: "B2",
                        onPress: (){}
-                     ).box.width(180).height(50).make(),
-                      15.heightBox,
+                     ).box.width(230).height(50).make(),
+                      20.heightBox,
                       ourButton(
                           textColor: Colors.black,
-                          title: "B1",
+                          title: "Business",
                           onPress: (){}
-                      ).box.width(180).height(50).make(),
-                      15.heightBox,
+                      ).box.width(230).height(50).make(),
+                      20.heightBox,
                       ourButton(
                           textColor: Colors.black,
-                          title: "B1",
+                          title: "Venders",
                           onPress: (){}
-                      ).box.width(180).height(50).make(),
-                      15.heightBox,
+                      ).box.width(230).height(50).make(),
+                      20.heightBox,
                       ourButton(
                           textColor: Colors.black,
                           title: "CUSTOMER >>",
                           onPress: (){
-                            Get.to(const LoginScreen(),transition: Transition.rightToLeft);
+                            Get.to( LoginScreen(),transition: Transition.rightToLeft);
                           }
-                      ).box.width(180).height(50).make(),
+                      ).box.width(230).height(50).make(),
                     ],
                   ),),
            ]
